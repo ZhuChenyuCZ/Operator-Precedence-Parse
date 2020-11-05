@@ -11,7 +11,13 @@ https://github.com/ZhuChenyuCZ/CompilerHomeWorkList
 
 ### 如果我的作业对你有帮助的话，麻烦给个star吧：D
 
-## 算符优先分析作业
+
+
+# 算符优先分析作业
+
+## 评测网址
+
+https://oj.karenia.cc/suite/1ft03dkbb240y
 
 ## 题目
 
@@ -113,6 +119,24 @@ RE
 Ii
 E
 ```
+
+### 其他相关地址
+
+测试OJ Rurikawa
+
+[https://oj.karenia.cc](https://oj.karenia.cc/)
+
+SystemProgramming 论坛
+
+[http://forum.loheagn.com](http://forum.loheagn.com/)
+
+评测机开源仓库
+
+https://github.com/BUAA-SE-Compiling/rurikawa
+
+评测机使用说明
+
+https://github.com/BUAA-SE-Compiling/rurikawa/blob/master/docs/manual/submit.md
 
 ## 评测记录
 
