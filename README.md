@@ -19,6 +19,21 @@ https://github.com/ZhuChenyuCZ/CompilerHomeWorkList
 
 https://oj.karenia.cc/suite/1ft03dkbb240y
 
+### 快速开始
+
+#### 本地方法
+
+在同文件夹下创建一个名为in.txt的文件。在in.txt中填写输入数据。
+
+```
+gcc -Wall OPG.c
+./a.out in.txt
+```
+
+#### OJ测试方法
+
+在评测机中输入仓库地址以及分支名称，点击提交。
+
 ## 题目
 
 编程实现以下文法 `G[E]` 的算符优先分析法：
