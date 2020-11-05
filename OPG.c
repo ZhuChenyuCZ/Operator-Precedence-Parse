@@ -126,6 +126,7 @@ int main(int argc,char* argv[])
     line[lineLen]='#';
     line[lineLen+1]='\n';
     //printf(line);
+    //printf("%d\n",lineLen);
     /*for (int i=0;i<10;i++)
     {
         printf("Character %d : %c;\n",i,CharacterNumList[i]);
@@ -137,6 +138,7 @@ int main(int argc,char* argv[])
     for (int i=1;i<=lineLen;)
     {
         //printf("now: %c\n",line[i]);
+        if (top==2&&stack[1]==7&&line[i]=='#') break;
         if (cmp(topTerminal(),charToint(line[i]))==2)
         {
             printf("E\n");
@@ -168,6 +170,8 @@ int main(int argc,char* argv[])
             printf("I%c\n",line[i]);
             i++;
         }
+        //printf("top=%d\n",top);
+        //printf("%d %d %d\n",stack[0],stack[1],stack[2]);
     }
 
     fclose(fp);
