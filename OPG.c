@@ -110,12 +110,14 @@ int main(int argc,char* argv[])
     FILE *fp = NULL;
     fp = fopen(argv[1], "r");
     fgets(OLine,2000,(FILE *)fp);
+    //printf(OLine);
     //lineLen=strlen(line);
     lineLen=1;
     line[0]='#';
     for (int i=0;i<strlen(OLine);i++)
     {
-        if (OLine[i]==' ')
+        if (OLine[i]!='+'&&OLine[i]!='*'&&OLine[i]!='i'&&OLine[i]!='('&&
+        OLine[i]!=')'&&OLine[i]!='z')
         {
             continue;
         }
