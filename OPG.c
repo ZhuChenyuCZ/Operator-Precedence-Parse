@@ -63,7 +63,9 @@ void setPrior()
 
 int cmp(int a,int b)
 {
-    return prior[a][b];
+    if (a>=0&&a<=6&&b>=0&&b<=6)
+        return prior[a][b];
+    else return 2;
 }
 
 int topTerminal()
@@ -113,8 +115,7 @@ int main(int argc,char* argv[])
     line[0]='#';
     for (int i=0;i<strlen(OLine);i++)
     {
-        if (OLine[i]!='+'&&OLine[i]!='*'&&OLine[i]!='i'&&OLine[i]!='('&&
-        OLine[i]!=')')
+        if (OLine[i]==' ')
         {
             continue;
         }
