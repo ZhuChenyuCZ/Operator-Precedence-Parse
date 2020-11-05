@@ -5,6 +5,7 @@
 const int CharacterNum=10;
 
 char line[2550];
+char OLine[2550];
 int stack[2550]={0};
 char CharacterNumList[1001]={' ','+','*','i','(',')','#','N','F','T','E'};
 int top=0,lineLen=0;
@@ -106,23 +107,31 @@ int main(int argc,char* argv[])
 {
     FILE *fp = NULL;
     fp = fopen(argv[1], "r");
-    fgets(line,2000,(FILE *)fp);
-    lineLen=strlen(line);
-    //在首尾分别添加# 
-    for (int i=lineLen;i>=0;i--)
+    fgets(OLine,2000,(FILE *)fp);
+    //lineLen=strlen(line);
+    lineLen=1;
+    line[0]='#';
+    for (int i=0;i<strlen(OLine);i++)
     {
-        line[i+1]=line[i];
+        if (OLine[i]!='+'&&OLine[i]!='*'&&OLine[i]!='i'&&OLine[i]!='('&&
+        OLine[i]!=')')
+        {
+            continue;
+        }
+        line[lineLen]=OLine[i];
+        lineLen++;
     }
+    //在首尾分别添加# 
     line[0]='#';
     line[lineLen]='#';
     line[lineLen+1]='\n';
-    printf(line);
+    //printf(line);
     /*for (int i=0;i<10;i++)
     {
         printf("Character %d : %c;\n",i,CharacterNumList[i]);
     }*/
 
-    /*setPrior();
+    setPrior();
 
     pushStack(charToint(line[0]));
     for (int i=1;i<=lineLen;)
@@ -160,7 +169,7 @@ int main(int argc,char* argv[])
             i++;
         }
     }
-*/
+
     fclose(fp);
     return 0;
 }
